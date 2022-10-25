@@ -21,7 +21,9 @@ const Column = styled.div`
   gap: 0.5rem;
   & div {
     display: flex;
+    justify-content: center;
     flex-direction: column;
+    align-items: center;
   }
 
   @media (min-width: 48rem) {
@@ -85,6 +87,7 @@ const ProjectContainer = styled.div`
   gap: 3rem;
   padding: 1rem;
   height: 100%;
+
   @media (min-width: 48rem) {
     gap: 1rem;
     flex-direction: row;
@@ -136,34 +139,40 @@ const Home: NextPage = () => {
           </Frame>
         </Hero>
         <ProjectContainer>
-          <FlipCardProvider backText="QuanderDome is a customizable trivia death match game, utilizing an open trivia db and websockets.">
+          <FlipCardProvider
+            backText="QuanderDome is a customizable trivia death match game, utilizing an open trivia db and websockets."
+            href="https://quanderdome.herokuapp.com"
+          >
             <ProjectFrame>
-              <Link href="https://quanderdome.herokuapp.com">
-                <a target="_blank">
-                  {" "}
-                  <Column>
-                    <span>QuanderDome</span>
-
-                    <div>
-                      <Image
-                        className="project-image"
-                        objectFit="contain"
-                        src="/images/quanderdome2.png"
-                        alt="Picture of the app match"
-                        width={200}
-                        height={120}
-                      />
-                      <div className="aside">
-                        QuanderDome is a customizable trivia death match game,
-                        utilizing an open trivia db and websockets.
-                      </div>
-                    </div>
-                  </Column>
-                </a>
-              </Link>
+              {" "}
+              <Column>
+                <span>QuanderDome</span>
+                <div>
+                  <Image
+                    className="project-image"
+                    objectFit="contain"
+                    src="/images/quanderdome2.png"
+                    alt="Picture of the app match"
+                    width={200}
+                    height={120}
+                  />{" "}
+                  <Link href="https://quanderdome.herokuapp.com">
+                    <a className="mobile_link" target="_blank">
+                      Link
+                    </a>
+                  </Link>
+                  <div className="aside">
+                    QuanderDome is a customizable trivia death match game,
+                    utilizing an open trivia db and websockets.
+                  </div>
+                </div>{" "}
+              </Column>
             </ProjectFrame>
           </FlipCardProvider>
-          <FlipCardProvider backText="Mnemora allows players to face waves of enemies as wizards in turn based combat. Spell casting requires timely button pressing.">
+          <FlipCardProvider
+            backText="Mnemora allows players to face waves of enemies as wizards in turn based combat. Spell casting requires timely button pressing."
+            href="https://mnemora.herokuapp.com"
+          >
             <ProjectFrame>
               <Column>
                 <span>Mnemora</span>
@@ -173,9 +182,14 @@ const Home: NextPage = () => {
                     objectFit="contain"
                     src="/images/mnemora2.png"
                     alt="Picture of the app match"
-                    width={140}
-                    height={110}
-                  />
+                    width={270}
+                    height={120}
+                  />{" "}
+                  <Link href="https://mnemora.herokuapp.com">
+                    <a className="mobile_link" target="_blank">
+                      Link
+                    </a>
+                  </Link>
                   <div className="aside">
                     Mnemora allows players to face waves of enemies as wizards
                     in turn based combat. Spell casting requires timely button
@@ -185,7 +199,10 @@ const Home: NextPage = () => {
               </Column>
             </ProjectFrame>
           </FlipCardProvider>
-          <FlipCardProvider backText="Jambo is a fighting game where two aliens and their swarms need to collide in space for supremacy.">
+          <FlipCardProvider
+            backText="Jambo is a fighting game where two aliens and their swarms need to collide in space for supremacy."
+            href="https://orloaft.itch.io/jambo"
+          >
             <ProjectFrame>
               <Column>
                 <span>Jambo</span>
@@ -197,7 +214,12 @@ const Home: NextPage = () => {
                     alt="Picture of the app match"
                     width={200}
                     height={120}
-                  />
+                  />{" "}
+                  <Link href="https://orloaft.itch.io/jambo">
+                    <a className="mobile_link" target="_blank">
+                      Link
+                    </a>
+                  </Link>
                   <div className="aside">
                     Jambo is a fighting game where two aliens and their swarms
                     need to collide in space for supremacy.
@@ -206,7 +228,10 @@ const Home: NextPage = () => {
               </Column>
             </ProjectFrame>
           </FlipCardProvider>
-          <FlipCardProvider backText="Land Locked is a multi-year collaboration which combines chess and fantasy card games.">
+          <FlipCardProvider
+            backText="Land Locked is a multi-year collaboration which combines chess and fantasy card games."
+            href="https://locked.land"
+          >
             <ProjectFrame>
               <Column>
                 <span>Land Locked</span>
@@ -218,10 +243,44 @@ const Home: NextPage = () => {
                     alt="Picture of the app match"
                     width={200}
                     height={120}
-                  />
+                  />{" "}
+                  <Link href="https://locked.land">
+                    <a className="mobile_link" target="_blank">
+                      Link
+                    </a>
+                  </Link>
                   <div className="aside">
                     Land Locked is a multi-year collaboration which combines
                     chess and fantasy card games.
+                  </div>
+                </div>
+              </Column>
+            </ProjectFrame>
+          </FlipCardProvider>
+          <FlipCardProvider
+            backText="Web eyes is a hackathon project that uses an open api for automatic tagging of uploaded images."
+            href="https://github.com/Orloaft/week8-hackathon"
+          >
+            <ProjectFrame>
+              <Column>
+                <span>Web eyes</span>
+                <div>
+                  <Image
+                    className="project-image"
+                    objectFit="contain"
+                    src="/images/webeyes.png"
+                    alt="Picture of the app"
+                    width={190}
+                    height={150}
+                  />{" "}
+                  <Link href="https://github.com/Orloaft/week8-hackathon">
+                    <a className="mobile_link" target="_blank">
+                      Link
+                    </a>
+                  </Link>
+                  <div className="aside">
+                    Web eyes is a hackathon project that uses an open api for
+                    automatic tagging of uploaded images.
                   </div>
                 </div>
               </Column>
@@ -232,11 +291,12 @@ const Home: NextPage = () => {
       </MainContainer>
       <footer
         style={{
-          position: "fixed",
           width: "100%",
-          bottom: 15,
+          position: "fixed",
+          bottom: "5%",
           display: "flex",
           justifyContent: "space-around",
+          alignItems: "flex-start ",
         }}
       >
         {" "}
@@ -271,6 +331,7 @@ const Home: NextPage = () => {
             position: "relative",
             height: "2.5rem",
             width: "2.5rem",
+            cursor: "pointer",
           }}
         >
           <Image

@@ -29,7 +29,7 @@ const Form = styled.form`
   @media (min-width: 48rem) {
     left: 25%;
     width: 50%;
-    height: 100%;
+    height: 70%;
   }
 `;
 export const EmailForm = () => {

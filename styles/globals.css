@@ -72,5 +72,16 @@ h1 {
 }
 footer div:hover {
   transform: scale(2);
-  transition: 0.8s;
+  transition: 0.8s ease-in-out;
+}
+a {
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background-color: black;
+  max-width: 40%;
+}
+@media (min-width: 48rem) {
+  .mobile_link {
+    display: none;
+  }
 }

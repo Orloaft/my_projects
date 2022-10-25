@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 const FlipCard = styled.div`
@@ -31,6 +32,9 @@ const FlipCardFront = styled.div`
 `;
 const FlipCardBack = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
   align-items: center;
   border: 2px solid #58355e;
   position: absolute;
@@ -42,12 +46,17 @@ const FlipCardBack = styled.div`
   transform: rotateY(180deg);
 `;
 
-export const FlipCardProvider = ({ children, backText }: any) => {
+export const FlipCardProvider = ({ children, backText, href }: any) => {
   return (
     <FlipCard>
       <FlipCardInner className="flip-card-inner">
         <FlipCardFront>{children}</FlipCardFront>
-        <FlipCardBack>{backText}</FlipCardBack>
+        <FlipCardBack>
+          {backText}{" "}
+          <Link href={href}>
+            <a target="_blank">Link</a>
+          </Link>
+        </FlipCardBack>
       </FlipCardInner>
     </FlipCard>
   );
