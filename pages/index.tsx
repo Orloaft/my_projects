@@ -138,6 +138,57 @@ const Home: NextPage = () => {
             </Text>
           </Frame>
         </Hero>
+        <footer
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "flex-start ",
+          }}
+        >
+          {" "}
+          <div
+            style={{
+              position: "relative",
+              height: "2.5rem",
+              width: "2.5rem",
+            }}
+          >
+            <Link href="https://www.linkedin.com/in/alex-orlow/">
+              <a target="_blank">
+                <Image src="/images/linkedin.png" alt="" layout="fill" />
+              </a>
+            </Link>{" "}
+          </div>
+          <div
+            style={{
+              position: "relative",
+              height: "2.5rem",
+              width: "2.5rem",
+            }}
+          >
+            <Link href="https://github.com/Orloaft">
+              <a target="_blank">
+                <Image src="/images/github.png" alt="" layout="fill" />
+              </a>
+            </Link>
+          </div>
+          <div
+            style={{
+              position: "relative",
+              height: "2.5rem",
+              width: "2.5rem",
+              cursor: "pointer",
+            }}
+          >
+            <Image
+              onClick={() => setShowModal(!showModal)}
+              src="/images/mail.png"
+              alt=""
+              layout="fill"
+            />{" "}
+          </div>
+        </footer>
         <ProjectContainer>
           <FlipCardProvider
             backText="QuanderDome is a customizable trivia death match game, utilizing an open trivia db and websockets."
@@ -289,59 +340,6 @@ const Home: NextPage = () => {
         </ProjectContainer>
         {showModal && <EmailForm />}
       </MainContainer>
-      <footer
-        style={{
-          width: "100%",
-          position: "fixed",
-          bottom: "5%",
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "flex-start ",
-        }}
-      >
-        {" "}
-        <div
-          style={{
-            position: "relative",
-            height: "2.5rem",
-            width: "2.5rem",
-          }}
-        >
-          <Link href="https://www.linkedin.com/in/alex-orlow/">
-            <a target="_blank">
-              <Image src="/images/linkedin.png" alt="" layout="fill" />
-            </a>
-          </Link>{" "}
-        </div>
-        <div
-          style={{
-            position: "relative",
-            height: "2.5rem",
-            width: "2.5rem",
-          }}
-        >
-          <Link href="https://github.com/Orloaft">
-            <a target="_blank">
-              <Image src="/images/github.png" alt="" layout="fill" />
-            </a>
-          </Link>
-        </div>
-        <div
-          style={{
-            position: "relative",
-            height: "2.5rem",
-            width: "2.5rem",
-            cursor: "pointer",
-          }}
-        >
-          <Image
-            onClick={() => setShowModal(!showModal)}
-            src="/images/mail.png"
-            alt=""
-            layout="fill"
-          />{" "}
-        </div>
-      </footer>
     </BackGround>
   );
 };
