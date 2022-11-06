@@ -8,6 +8,7 @@ const Form = styled.form`
   padding: 0.5rem;
   font-size: 1rem;
   flex-direction: column;
+  align-items: center;
   position: absolute;
   gap: 1rem;
   top: 25%;
@@ -19,20 +20,34 @@ const Form = styled.form`
     height: 2rem;
     border: none;
     background-color: gray;
+    width: 90%;
   }
   & textarea {
-    height: 6rem;
+    width: 90%;
+    height: 50%;
     border: none;
     background-color: gray;
     resize: none;
   }
   @media (min-width: 48rem) {
+    top: 10%;
     left: 25%;
     width: 50%;
     height: 70%;
   }
 `;
-export const EmailForm = () => {
+const Button = styled.button`
+  height: 10%;
+  width: 30%;
+  font-family: RussoOne;
+`;
+const ReturnButton = styled.div`
+  cursor: pointer;
+  position: absolute;
+  top: 2.5%;
+  right: 2.5%;
+`;
+export const EmailForm = (props: { showModal: (arg0: boolean) => void }) => {
   const [form, setForm] = useState({ email: "", subject: "", message: "" });
   const [message, setMessage] = useState("");
   const handleSubmit = (e: any) => {
@@ -50,13 +65,20 @@ export const EmailForm = () => {
   };
   return (
     <Form onChange={(e) => handleChange(e)} onSubmit={(e) => handleSubmit(e)}>
+      <ReturnButton
+        onClick={() => {
+          props.showModal(false);
+        }}
+      >
+        X
+      </ReturnButton>
       Email address
       <input name="email" value={form.email}></input>
       Subject
       <input name="subject" value={form.subject}></input>
       Message
       <textarea name="message" value={form.message}></textarea>
-      <button>Send message</button>
+      <Button>Send message</Button>
       {message}
     </Form>
   );

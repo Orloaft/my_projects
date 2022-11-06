@@ -338,7 +338,7 @@ const Home: NextPage = () => {
             </ProjectFrame>
           </FlipCardProvider>
         </ProjectContainer>
-        {showModal && <EmailForm />}
+        {showModal && <EmailForm showModal={setShowModal} />}
       </MainContainer>
     </BackGround>
   );
