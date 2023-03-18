@@ -280,6 +280,36 @@ const Home: NextPage = () => {
             </ProjectFrame>
           </FlipCardProvider>
           <FlipCardProvider
+            backText="  Space Dice is a browser version of the dice rolling game
+            `farkle`"
+            href="https://spacedice.herokuapp.com"
+          >
+            <ProjectFrame>
+              <Column>
+                <span>Space Dice</span>
+                <div>
+                  <Image
+                    className="project-image"
+                    objectFit="contain"
+                    src="/images/spacedice.jpg"
+                    alt="Picture of the app match"
+                    width={200}
+                    height={120}
+                  />{" "}
+                  <Link href="https://spacedice.herokuapp.com">
+                    <a className="mobile_link" target="_blank">
+                      Link
+                    </a>
+                  </Link>
+                  <div className="aside">
+                    Space Dice is a browser version of the dice rolling game
+                    `farkle`
+                  </div>
+                </div>
+              </Column>
+            </ProjectFrame>
+          </FlipCardProvider>
+          <FlipCardProvider
             backText="Land Locked is a multi-year collaboration which combines chess and fantasy card games."
             href="https://locked.land"
           >
