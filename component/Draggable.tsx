@@ -27,6 +27,7 @@ const DraggableProjectCard: React.FC<ProjectCardProps> = (props) => {
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
       style={{
+        cursor: "grab",
         boxShadow: isDragging
           ? "0px 0px 10px 5px rgba(255,105,180,0.75)"
           : "none",

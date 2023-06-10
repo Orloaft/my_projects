@@ -11,9 +11,9 @@ const Form = styled.form`
   align-items: center;
   position: absolute;
   gap: 1rem;
-  top: 25%;
-  left: 10%;
-  width: 80%;
+  top: 10%;
+  left: 5%;
+  width: 90%;
   height: 80%;
   z-index: 3;
   & input {

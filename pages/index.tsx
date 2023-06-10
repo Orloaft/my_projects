@@ -7,6 +7,7 @@ import { EmailForm } from "../component/EmailForm";
 import ProjectList from "../component/ProjectList";
 import { Footer } from "../component/Footer";
 import { HeroView } from "../component/Hero";
+import { Orbit } from "../component/Orbit/OrbitingView";
 const MainContainer = styled.div`
   background: transparent;
   color: white;
@@ -75,14 +76,7 @@ const Home: NextPage = () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <BackGround>
-      <MainContainer>
-        <HeroView />
-        <Footer setShowModal={setShowModal} showModal={showModal} />
-        <ProjectContainer>
-          <ProjectList />
-        </ProjectContainer>
-        {showModal && <EmailForm showModal={setShowModal} />}
-      </MainContainer>
+      <Orbit showModal={showModal} setShowModal={setShowModal} />
     </BackGround>
   );
 };

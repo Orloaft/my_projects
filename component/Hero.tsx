@@ -31,17 +31,7 @@ font-size: 1rem;
 export const HeroView = () => {
   return (
     <Hero>
-      <div style={{ width: "30%" }}>
-        <Frame style={{ maxWidth: "140px", minWidth: "140px" }}>
-          <Image
-            objectFit="contain"
-            src="/images/pixelAvatar.png"
-            alt="Picture of the author"
-            width={125}
-            height={150}
-          />
-        </Frame>
-      </div>
+      <div style={{ width: "30%" }}></div>
       <Frame
         style={{
           minWidth: "70%",

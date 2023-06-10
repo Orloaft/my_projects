@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+
 export const Footer = ({
   setShowModal,
   showModal,
@@ -8,14 +9,7 @@ export const Footer = ({
   showModal: boolean;
 }) => {
   return (
-    <footer
-      style={{
-        width: "100%",
-        display: "flex",
-        justifyContent: "space-around",
-        alignItems: "flex-start ",
-      }}
-    >
+    <footer className="socials">
       {" "}
       <div
         style={{
