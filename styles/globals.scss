@@ -15,7 +15,7 @@ html {
   left: 10%;
   width: 300px;
   height: 200px;
-
+  opacity: 0;
   transition: top 1.6s ease-in-out;
 
 }
@@ -41,6 +41,7 @@ html {
   display: block;
 }
 .socials{
+  pointer-events: none;
   display: flex;
   flex-direction: row;
   position: absolute;
@@ -51,7 +52,7 @@ html {
 }
 .orbit-wrap {
   margin:0;
-  height: 40em;
+ 
   list-style: none;
   font-size: 1.3em;
   
@@ -105,7 +106,7 @@ ul[class^=ring] {
     height: 25em - ($i * 5);
     animation: clockwiseRotate 35s - ($i * 5) linear infinite;
     
-    i {
+   div {
       animation: counterClockwiseRotate 35s - ($i * 5) linear infinite;
     }
   }
@@ -115,7 +116,7 @@ ul[class^=ring] {
 
 
 %ring {
-  border: solid 1px rgba(33, 150, 243, 0.8);
+  border: solid 4px  #17effeb4;
   position: relative;
   padding: 0;
   border-radius: 50%;
@@ -147,10 +148,11 @@ ul[class^=ring] {
   align-items: center;
   background: #8FD3FF;
   border-radius: 50%;
-  transition: .8s;
+  transition: all .8s ease-in-out;
   &:hover {
+   
     transform: scale(3.5);
-    
+
   }
   &:hover .socials{
     display: flex;
@@ -159,10 +161,12 @@ ul[class^=ring] {
     left:0;
     transform: scale(.6);
     z-index: 3;
+    pointer-events: all;
     opacity: 1;
   }
 }
 .orbit-center:hover + .hero-text {
+  opacity: 1;
   top:10%;
   
  }
@@ -195,36 +199,8 @@ animations
   }
 }
 
-/* 
-icons 
-*/
-$icons : (
-  ('heart-o', #b71c1c, white),
-  ('coffee', #4CAF50, #CDDC39),
-  ('safari', white, darkslateblue),
-  ('firefox', #1565c0, #ff8f00),
-  ('chrome', #fbc02d, #ef6c00),
-  ('edge', #03a9f4, white),
-  ('android', snow, limegreen),
-  ('apple', #444, white),
-  ('linux', white, #222),
-  ('windows', white, #03a9f4),
-  ('terminal', #222, #fff),
-  ('html5', white, #e65100),
-  ('css3', white, #2196f3),
-  ('git', #222, white),
-  ('free-code-camp', green, white),
-  ('meetup', red, white),
-  ('podcast', red, white),
-  ('codepen', #333, white)
-);
 
-@each $icon in $icons {
-  .fa-#{nth($icon, 1)} {
-    background: nth($icon, 2);
-    color: nth($icon, 3);
-  }
-}
+
 
 
 
@@ -233,6 +209,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: RussoOne;
+  overflow-y: hidden;
 }
 a {
   color: inherit;
@@ -313,5 +290,35 @@ a {
 @media (min-width: 48rem) {
   .mobile_link {
     display: none;
+  }
+}
+/* 
+icons 
+*/
+$icons : (
+  ('heart-o', #b71c1c, white),
+  ('coffee', #4CAF50, #CDDC39),
+  ('safari', white, darkslateblue),
+  ('firefox', #1565c0, #ff8f00),
+  ('chrome', #fbc02d, #ef6c00),
+  ('edge', #03a9f4, white),
+  ('android', snow, limegreen),
+  ('apple', #444, white),
+  ('linux', white, #222),
+  ('windows', white, #03a9f4),
+  ('terminal', #222, #fff),
+  ('html5', white, #e65100),
+  ('css3', white, #2196f3),
+  ('git', #222, white),
+  ('free-code-camp', green, white),
+  ('meetup', red, white),
+  ('podcast', red, white),
+  ('codepen', #333, white)
+);
+
+@each $icon in $icons {
+  .fa-#{nth($icon, 1)} {
+    background: nth($icon, 2);
+    color: nth($icon, 3);
   }
 }

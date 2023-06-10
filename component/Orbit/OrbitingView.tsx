@@ -24,52 +24,12 @@ export const Orbit = (props: any) => {
         <li>
           <ul className="ring-0">
             <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
+              <div>Jambo</div>
             </li>
+            <li></li>
+            <li></li>
             <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
-            </li>
-            <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
-            </li>
-            <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
+              <div>Web Eyes</div>
             </li>
           </ul>
         </li>
@@ -77,181 +37,35 @@ export const Orbit = (props: any) => {
         <li>
           <ul className="ring-1">
             <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
+              <div>Mnemo</div>
             </li>
-            <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
-            </li>
-            <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
-            </li>
+            <li></li>
+            <li></li>
           </ul>
         </li>
         <li>
           <ul className="ring-2">
             <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
+              <div>GPT-Autodoc</div>
             </li>
+            <li></li>
+            <li></li>
+            <li></li>
             <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
+              <div>Space Dice</div>
             </li>
-            <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
-            </li>
-            <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
-            </li>
-            <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
-            </li>
-            <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
-            </li>
-            <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
-            </li>
-            <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
-            </li>
+            <li></li>
+            <li></li>
+            <li></li>
           </ul>
         </li>
         <li>
           <ul className="ring-3">
+            <li></li>
             <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
+              <div>QuanderDome</div>
             </li>
-            <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
-            </li>
-            <li>
-              <ProjectCard
-                {...{
-                  backText:
-                    "Land Locked is a multi-year collaboration which combines chess and fantasy card games.",
-                  href: "https://locked.land",
-                  title: "Land Locked",
-                  imageSrc: "/images/landlocked1.png",
-                  altText: "Picture of the app match",
-                }}
-              />
-            </li>
+            <li></li>
           </ul>
         </li>
       </ul>

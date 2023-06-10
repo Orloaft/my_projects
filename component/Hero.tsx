@@ -43,6 +43,7 @@ export const HeroView = () => {
           style={{
             width: "100%",
             margin: "0.5rem 0",
+            color: "white",
           }}
         >
           My name is Alex. <br></br>I am a lover of games and web technologies.

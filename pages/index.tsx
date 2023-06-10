@@ -77,6 +77,7 @@ const Home: NextPage = () => {
   return (
     <BackGround>
       <Orbit showModal={showModal} setShowModal={setShowModal} />
+      {showModal && <EmailForm showModal={setShowModal} />}
     </BackGround>
   );
 };

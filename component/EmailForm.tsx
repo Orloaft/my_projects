@@ -15,7 +15,7 @@ const Form = styled.form`
   left: 5%;
   width: 90%;
   height: 80%;
-  z-index: 3;
+  z-index: 9;
   & input {
     height: 2rem;
     border: none;
