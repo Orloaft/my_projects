@@ -1,15 +1,23 @@
 $orbitItemSize: 1.6em;
 $map: (ring-0: 4, ring-1: 3, ring-2: 8, ring-3: 3);
 $lastRing: 3;
-
+@font-face {
+  font-family: 'TiltPrism';
+  src: url('/fonts/BungeeShade-Regular.ttf') format('truetype');
+}
 * {
   box-sizing: border-box;
 }
 
 html {
+  background-image:url('/images/Hexagon.svg');
+  background-repeat: none;
+  background-size: cover;
   font-size: 100%;
+
 }
 .hero-text{
+
   position: absolute;
   top: 100%;
   left: 10%;
@@ -25,8 +33,7 @@ html {
   background:transparent;
   float: left;
   width: 100%;
-  min-width: 100vw;
-  min-height:100vh;
+  height: 100%
 }
 
 .orbit-icon {
@@ -49,6 +56,75 @@ html {
   transition: bottom 1.6s ease-in-out;
   z-index: 3;
   opacity: 0;
+}
+
+.project-icon {
+  cursor: grab;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background: url('/images/3350857.svg') ;
+  font-size: 1rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-position: center;
+  background-size: contain;
+  justify-content: center;
+  color: #fff;
+}
+.star {
+  opacity: 1;
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 5px white;
+ 
+}
+.star:before,
+.star:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background-color: inherit;
+}
+
+.star:before {
+  transform: rotate(45deg);
+}
+
+.star:after {
+  transform: rotate(-45deg);
+}
+
+@keyframes twinkle {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  
+  to {
+    transform: translate(calc(-50% + (100vw * var(--x))), calc(-50% + (100vh * var(--y)))) scale(1);
+    opacity: 1;
+    --x: calc(1.5 * random());
+    --y: calc(1.5 * random());
+   
+}}
+.hero-text--right {
+  position: absolute;
+  top:10%;
+  right:10%;
+  display:flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: top 1.6s ease-in-out;
+  height: 10rem;
 }
 .orbit-wrap {
   margin:0;
@@ -86,7 +162,81 @@ ul[class^=ring] {
     transition: all 300ms ease-in-out;
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+.giant-text {
+  transition: all 1s ease-in-out;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  top:-15%;
+  z-index: 8;
+  position: absolute;
+  opacity: .9 ;
+  font-family: 'TiltPrism', sans-serif;
+  font-size: 10vw;
+  color: #17effeb4;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+  animation: neon-glow 2s linear infinite;
+  & span {
+    transform: skew(-20deg);
+  }
+}
+.arcade-machine {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  &__screen {
+    position: relative;
+    overflow: hidden;
+    margin-top: 1%;
+    /* Set the desired size and aspect ratio of the screen */
+     width: 70%;
+    height: 90%;
+    border: 2px solid #ccc;
+    background-color: #030e4f;
+  }
 
+  &__controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+
+    &__joystick {
+      width: 40px;
+      height: 40px;
+      background-color: #ccc;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    &__buttons {
+      display: flex;
+
+      .arcade-machine__button {
+        width: 30px;
+        height: 30px;
+        background-color: #ccc;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+@keyframes neon-glow {
+  0% { text-shadow: 0 0 10px #78157f, 0 0 20px #78157f, 0 0 30px #78157f; }
+  // 50% { text-shadow: 0 0 20px #ce2af3, 0 0 30px #ce2af3, 0 0 40px #ce2af3; }
+  100% { text-shadow: 0 0 10px #78157f, 0 0 20px #78157f, 0 0 30px #78157f; }
+}
+.project-card {
+  width: 10rem;
+}
 @mixin orbit-item($numItems, $numRing) {
   @for $s from 1 through $numItems {  
     // Spread items over the ring
@@ -104,10 +254,10 @@ ul[class^=ring] {
     // decrease each ring in size
     width: 25em - ($i * 5);
     height: 25em - ($i * 5);
-    animation: clockwiseRotate 35s - ($i * 5) linear infinite;
+    animation: clockwiseRotate 70s - ($i * 5) linear infinite;
     
    div {
-      animation: counterClockwiseRotate 35s - ($i * 5) linear infinite;
+      animation: counterClockwiseRotate 70s - ($i * 5) linear infinite;
     }
   }
   
@@ -116,7 +266,7 @@ ul[class^=ring] {
 
 
 %ring {
-  border: solid 4px  #17effeb4;
+  border: solid 2px  #f49f1c;
   position: relative;
   padding: 0;
   border-radius: 50%;
@@ -150,14 +300,16 @@ ul[class^=ring] {
   border-radius: 50%;
   transition: all .8s ease-in-out;
   &:hover {
-   
+    & ~ .giant-text{
+      opacity: 0;
+    }
     transform: scale(3.5);
 
   }
   &:hover .socials{
     display: flex;
     flex-direction: column;
-    bottom:0;
+    bottom:25%;
     left:0;
     transform: scale(.6);
     z-index: 3;
@@ -165,10 +317,15 @@ ul[class^=ring] {
     opacity: 1;
   }
 }
-.orbit-center:hover + .hero-text {
+.orbit-center:hover ~ .hero-text {
   opacity: 1;
   top:10%;
   
+ }
+ .orbit-center:hover ~ .hero-text--right {
+  top: 100%;
+  opacity: 1;
+ 
  }
 .orbit-wrap > li.orbit-center:hover ~ li > ul {
   width: 0;
@@ -225,7 +382,7 @@ a {
   background-image: linear-gradient(
     -60deg,
     rgb(138, 92, 247) 50%,
-    rgb(82, 179, 218) 50%
+    rgb(31, 16, 108) 50%
   );
   bottom: 0;
   left: -50%;
@@ -277,9 +434,12 @@ h1 {
     url("../public/fonts/RussoOne-Regular.woff2") format("truetype");
   font-weight: bold;
 }
+footer div{
+  transition: all .8s ease-in-out;
+}
 footer div:hover {
   transform: scale(2);
-  transition: 0.8s ease-in-out;
+  
 }
 a {
   font-size: 1rem;

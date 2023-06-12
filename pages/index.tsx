@@ -8,6 +8,7 @@ import ProjectList from "../component/ProjectList";
 import { Footer } from "../component/Footer";
 import { HeroView } from "../component/Hero";
 import { Orbit } from "../component/Orbit/OrbitingView";
+import ArcadeMachine from "../component/ArcadeMachine";
 const MainContainer = styled.div`
   background: transparent;
   color: white;
@@ -75,10 +76,10 @@ const ProjectContainer = styled.div`
 const Home: NextPage = () => {
   const [showModal, setShowModal] = useState(false);
   return (
-    <BackGround>
+    <ArcadeMachine>
       <Orbit showModal={showModal} setShowModal={setShowModal} />
       {showModal && <EmailForm showModal={setShowModal} />}
-    </BackGround>
+    </ArcadeMachine>
   );
 };
 

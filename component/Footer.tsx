@@ -14,8 +14,8 @@ export const Footer = ({
       <div
         style={{
           position: "relative",
-          height: "2.5rem",
-          width: "2.5rem",
+          height: "1.5rem",
+          width: "1.5rem",
         }}
       >
         <Link href="https://www.linkedin.com/in/alex-orlow/">
@@ -27,8 +27,8 @@ export const Footer = ({
       <div
         style={{
           position: "relative",
-          height: "2.5rem",
-          width: "2.5rem",
+          height: "1.5rem",
+          width: "1.5rem",
         }}
       >
         <Link href="https://github.com/Orloaft">
@@ -40,8 +40,8 @@ export const Footer = ({
       <div
         style={{
           position: "relative",
-          height: "2.5rem",
-          width: "2.5rem",
+          height: "1.5rem",
+          width: "1.5rem",
           cursor: "pointer",
         }}
       >

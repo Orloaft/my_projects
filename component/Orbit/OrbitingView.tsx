@@ -1,8 +1,8 @@
 import { Footer } from "../Footer";
 import { HeroView } from "../Hero";
-import ProjectCard from "../ProjectCard";
 
 import Image from "next/image";
+
 export const Orbit = (props: any) => {
   return (
     <div className="orbit">
@@ -18,18 +18,40 @@ export const Orbit = (props: any) => {
             height={125}
           />
         </li>
+        {/* <div className="giant-text">
+          <span>Alex</span> <span>Orlow</span>
+        </div> */}
         <div className="hero-text">
           <HeroView />
         </div>
+
         <li>
           <ul className="ring-0">
             <li>
-              <div>Jambo</div>
+              <div
+                style={{ boxShadow: " 0 0 10px blue" }}
+                className="project-icon"
+              >
+                Jambo
+              </div>
             </li>
             <li></li>
-            <li></li>
             <li>
-              <div>Web Eyes</div>
+              {" "}
+              <div
+                style={{ boxShadow: " 0 0 10px green" }}
+                className="project-icon"
+              >
+                Quander Dome
+              </div>
+            </li>
+            <li>
+              <div
+                style={{ boxShadow: " 0 0 10px purple" }}
+                className="project-icon"
+              >
+                Web Eyes
+              </div>
             </li>
           </ul>
         </li>
@@ -37,7 +59,12 @@ export const Orbit = (props: any) => {
         <li>
           <ul className="ring-1">
             <li>
-              <div>Mnemo</div>
+              <div
+                style={{ boxShadow: " 0 0 10px red" }}
+                className="project-icon"
+              >
+                Mnemo
+              </div>
             </li>
             <li></li>
             <li></li>
@@ -46,13 +73,23 @@ export const Orbit = (props: any) => {
         <li>
           <ul className="ring-2">
             <li>
-              <div>GPT-Autodoc</div>
+              <div
+                style={{ boxShadow: " 0 0 10px white" }}
+                className="project-icon"
+              >
+                GPT-Autodoc
+              </div>
             </li>
             <li></li>
             <li></li>
             <li></li>
             <li>
-              <div>Space Dice</div>
+              <div
+                style={{ boxShadow: " 0 0 10px yellow" }}
+                className="project-icon"
+              >
+                Space Dice
+              </div>
             </li>
             <li></li>
             <li></li>
@@ -62,9 +99,7 @@ export const Orbit = (props: any) => {
         <li>
           <ul className="ring-3">
             <li></li>
-            <li>
-              <div>QuanderDome</div>
-            </li>
+            <li></li>
             <li></li>
           </ul>
         </li>

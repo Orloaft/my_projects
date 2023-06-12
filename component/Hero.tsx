@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
 
 const Text = styled.p`
   font-size: 1rem;
@@ -11,6 +10,7 @@ const Text = styled.p`
   }
 `;
 const Hero = styled.div`
+  z-index: 10;
   display: flex;
   padding: 1rem;
   gap: 0.5rem;
