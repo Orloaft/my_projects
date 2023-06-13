@@ -62,7 +62,13 @@ function ArcadeMachine({ children }: ArcadeMachineProps) {
         ></button>{" "}
         <button
           onClick={() => {
-            setScreenOn(!screenOn);
+            if (!isTurnedOn) {
+              toggleSwitcherTV();
+              setTimeout(() => {
+                setScreenOn(!screenOn);
+                toggleSwitcherTV();
+              }, 500);
+            }
           }}
           className="push--skeuo next"
         >
