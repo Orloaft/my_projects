@@ -11,7 +11,7 @@ function ArcadeMachine({ children }: ArcadeMachineProps) {
   const [screenOn, setScreenOn] = useState(false);
   const screenRef = useRef<HTMLDivElement | null>(null);
   const timelineRef = useRef<any | null>(null);
-  let isTurnedOn = true;
+  let isTurnedOn = false;
 
   const buildTimeline = () => {
     timelineRef.current = gsap.timeline({ paused: true });
