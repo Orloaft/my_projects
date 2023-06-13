@@ -28,6 +28,9 @@ html {
   height: 200px;
   opacity: 0;
   transition: top 1.6s ease-in-out;
+  @media (max-width: 767px) {
+    top: -100%;
+  }
 }
 .orbit {
   filter: contrast(115%);
@@ -37,6 +40,9 @@ html {
   float: left;
   width: 100%;
   height: 100%;
+  @media (max-width: 767px) {
+    transform: scale(0.75);
+  }
 }
 
 .orbit-icon {
@@ -193,7 +199,7 @@ ul[class^="ring"] {
   width: 100vw;
   height: 100vh;
   @media (max-width: 767px) {
-    padding: 1%;
+    padding: 30% 1%;
     flex-direction: column;
     gap: 0;
   }
@@ -205,7 +211,7 @@ ul[class^="ring"] {
     overflow: hidden;
     border-radius: 90px 93px 93px 93px;
     width: 70%;
-    height: 90%;
+    height: 100%;
     border: 10px solid #515151;
     background-color: #000000;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
@@ -316,12 +322,19 @@ ul[class^="ring"] {
     z-index: 3;
     pointer-events: all;
     opacity: 1;
+
+    @media (max-width: 767px) {
+      left: 0;
+    }
   }
 }
 .orbit-center:hover ~ .hero-text {
   z-index: 12;
   opacity: 1;
   top: 10%;
+  @media (max-width: 767px) {
+    left: 40%;
+  }
 }
 
 .orbit-wrap > li.orbit-center:hover ~ li > ul {
