@@ -1,23 +1,26 @@
 $orbitItemSize: 1.6em;
-$map: (ring-0: 4, ring-1: 3, ring-2: 8, ring-3: 3);
+$map: (
+  ring-0: 4,
+  ring-1: 3,
+  ring-2: 8,
+  ring-3: 3,
+);
 $lastRing: 3;
 @font-face {
-  font-family: 'TiltPrism';
-  src: url('/fonts/BungeeShade-Regular.ttf') format('truetype');
+  font-family: "TiltPrism";
+  src: url("/fonts/BungeeShade-Regular.ttf") format("truetype");
 }
 * {
   box-sizing: border-box;
 }
 
 html {
-  background-image:url('/images/Hexagon.svg');
+  background-image: url("/images/Hexagon.svg");
   background-repeat: none;
   background-size: cover;
   font-size: 100%;
-
 }
-.hero-text{
-
+.hero-text {
   position: absolute;
   top: 100%;
   left: 10%;
@@ -25,15 +28,15 @@ html {
   height: 200px;
   opacity: 0;
   transition: top 1.6s ease-in-out;
-
 }
 .orbit {
+  filter: contrast(115%);
   position: absolute;
   z-index: 5;
-  background:transparent;
+  background: transparent;
   float: left;
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 
 .orbit-icon {
@@ -47,12 +50,12 @@ html {
   text-align: center;
   display: block;
 }
-.socials{
+.socials {
   pointer-events: none;
   display: flex;
   flex-direction: row;
   position: absolute;
-  bottom:100%;
+  bottom: 100%;
   transition: bottom 1.6s ease-in-out;
   z-index: 3;
   opacity: 0;
@@ -63,7 +66,7 @@ html {
   height: 4rem;
   width: 4rem;
   border-radius: 50%;
-  background: url('/images/3350857.svg') ;
+  background: url("/images/3350857.svg");
   font-size: 1rem;
   display: flex;
   text-align: center;
@@ -81,11 +84,10 @@ html {
   border-radius: 50%;
   background-color: white;
   box-shadow: 0 0 5px white;
- 
 }
 .star:before,
 .star:after {
-  content: '';
+  content: "";
   position: absolute;
   top: -2px;
   left: -2px;
@@ -108,36 +110,36 @@ html {
     transform: translate(-50%, -50%) scale(0);
     opacity: 1;
   }
-  
+
   to {
     transform: translate(calc(-50% + (100vw * var(--x))), calc(-50% + (100vh * var(--y)))) scale(1);
     opacity: 1;
     --x: calc(1.5 * random());
     --y: calc(1.5 * random());
-   
-}}
+  }
+}
 .hero-text--right {
   position: absolute;
-  top:10%;
-  right:10%;
-  display:flex;
+  top: 10%;
+  right: 10%;
+  display: flex;
   flex-direction: column;
   opacity: 1;
   transition: top 1.6s ease-in-out;
   height: 10rem;
 }
 .orbit-wrap {
-  margin:0;
- 
+  margin: 0;
+
   list-style: none;
   font-size: 1.3em;
-  
+
   > li {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    
+
     &:hover {
       ul {
         border-width: 2px;
@@ -146,15 +148,14 @@ html {
       ~ li ul {
         border-color: rgba(255, 255, 255, 0.2);
         li {
-          opacity: 0.4;          
+          opacity: 0.4;
         }
       }
     }
-    
   }
 }
 
-ul[class^=ring] {
+ul[class^="ring"] {
   @extend %ring;
   transition: all 300ms ease-in-out;
   li {
@@ -162,86 +163,75 @@ ul[class^=ring] {
     transition: all 300ms ease-in-out;
   }
 }
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 .giant-text {
-  transition: all 1s ease-in-out;
+  height: 100%;
   width: 100%;
+  pointer-events: none;
   display: flex;
-  justify-content: space-around;
-  top:-15%;
+  align-items: center;
+  justify-content: center;
   z-index: 8;
   position: absolute;
-  opacity: .9 ;
-  font-family: 'TiltPrism', sans-serif;
-  font-size: 10vw;
-  color: #17effeb4;
+  opacity: 0.9;
+  font-family: "TiltPrism", sans-serif;
+  font-size: 5rem;
+  color: #f49f1c;
   text-transform: uppercase;
-  text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
-  animation: neon-glow 2s linear infinite;
+
   & span {
     transform: skew(-20deg);
   }
 }
 .arcade-machine {
+  padding: 5%;
   position: relative;
   display: flex;
-  justify-content: center;
+  gap: 10%;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   &__screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     overflow: hidden;
-    margin-top: 1%;
-    /* Set the desired size and aspect ratio of the screen */
-     width: 70%;
+    border-radius: 90px 93px 93px 93px;
+    width: 70%;
     height: 90%;
-    border: 2px solid #ccc;
-    background-color: #030e4f;
+    border: 10px solid #515151;
+    background-color: #000000;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
   }
 
   &__controls {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
-    align-items: center;
-
-    &__joystick {
-      width: 40px;
-      height: 40px;
-      background-color: #ccc;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-
-    &__buttons {
-      display: flex;
-
-      .arcade-machine__button {
-        width: 30px;
-        height: 30px;
-        background-color: #ccc;
-        border-radius: 50%;
-        margin-right: 5px;
-      }
-    }
+    justify-content: space-around;
+    height: 100%;
+    flex-direction: column;
   }
 }
 
 @keyframes neon-glow {
-  0% { text-shadow: 0 0 10px #78157f, 0 0 20px #78157f, 0 0 30px #78157f; }
+  0% {
+    text-shadow: 0 0 10px #78157f, 0 0 20px #78157f, 0 0 30px #78157f;
+  }
   // 50% { text-shadow: 0 0 20px #ce2af3, 0 0 30px #ce2af3, 0 0 40px #ce2af3; }
-  100% { text-shadow: 0 0 10px #78157f, 0 0 20px #78157f, 0 0 30px #78157f; }
+  100% {
+    text-shadow: 0 0 10px #78157f, 0 0 20px #78157f, 0 0 30px #78157f;
+  }
 }
 .project-card {
   width: 10rem;
 }
 @mixin orbit-item($numItems, $numRing) {
-  @for $s from 1 through $numItems {  
+  @for $s from 1 through $numItems {
     // Spread items over the ring
     $deg: 380deg / $numItems;
-    
+
     .ring-#{$numRing} > *:nth-of-type(#{$s}) {
       transform: rotate($s * $deg) translate(12.5em - ($numRing * 2.5)) rotate(-$s * $deg);
     }
@@ -249,24 +239,23 @@ ul[class^=ring] {
 }
 
 // Render rings
-@for $i from 0 through $lastRing {  
+@for $i from 0 through $lastRing {
   .ring-#{$i} {
     // decrease each ring in size
     width: 25em - ($i * 5);
     height: 25em - ($i * 5);
     animation: clockwiseRotate 70s - ($i * 5) linear infinite;
-    
-   div {
+
+    div {
       animation: counterClockwiseRotate 70s - ($i * 5) linear infinite;
     }
   }
-  
+
   @include orbit-item(map-get($map, ring-#{$i}), $i);
 }
 
-
 %ring {
-  border: solid 2px  #f49f1c;
+  border: solid 2px #f49f1c;
   position: relative;
   padding: 0;
   border-radius: 50%;
@@ -296,37 +285,32 @@ ul[class^=ring] {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #8FD3FF;
+  background: #8fd3ff;
   border-radius: 50%;
-  transition: all .8s ease-in-out;
+  transition: all 0.8s ease-in-out;
   &:hover {
-    & ~ .giant-text{
+    & ~ .giant-text {
       opacity: 0;
     }
     transform: scale(3.5);
-
   }
-  &:hover .socials{
+  &:hover .socials {
     display: flex;
     flex-direction: column;
-    bottom:25%;
-    left:0;
-    transform: scale(.6);
+    bottom: 25%;
+    left: 75%;
+    transform: scale(0.6);
     z-index: 3;
     pointer-events: all;
     opacity: 1;
   }
 }
 .orbit-center:hover ~ .hero-text {
+  z-index: 12;
   opacity: 1;
-  top:10%;
-  
- }
- .orbit-center:hover ~ .hero-text--right {
-  top: 100%;
-  opacity: 1;
- 
- }
+  top: 10%;
+}
+
 .orbit-wrap > li.orbit-center:hover ~ li > ul {
   width: 0;
   height: 0;
@@ -339,12 +323,12 @@ ul[class^=ring] {
 animations 
 */
 @keyframes clockwiseRotate {
-    from {
-        transform: rotate(0deg)
-    }
-    to {
-        transform: rotate(360deg)
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes counterClockwiseRotate {
@@ -352,14 +336,9 @@ animations
     transform: rotate(0deg);
   }
   100% {
-      transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
-
-
-
-
-
 
 html,
 body {
@@ -379,11 +358,7 @@ a {
 
 .bg {
   animation: slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(
-    -60deg,
-    rgb(138, 92, 247) 50%,
-    rgb(31, 16, 108) 50%
-  );
+  background-image: linear-gradient(-60deg, rgb(8, 1, 70) 50%, rgb(11, 2, 130) 50%);
   bottom: 0;
   left: -50%;
   opacity: 0.5;
@@ -430,16 +405,14 @@ h1 {
 }
 @font-face {
   font-family: "RussoOne";
-  src: local("RussoOne"),
-    url("../public/fonts/RussoOne-Regular.woff2") format("truetype");
+  src: local("RussoOne"), url("../public/fonts/RussoOne-Regular.woff2") format("truetype");
   font-weight: bold;
 }
-footer div{
-  transition: all .8s ease-in-out;
+footer div {
+  transition: all 0.8s ease-in-out;
 }
 footer div:hover {
   transform: scale(2);
-  
 }
 a {
   font-size: 1rem;
@@ -455,25 +428,25 @@ a {
 /* 
 icons 
 */
-$icons : (
-  ('heart-o', #b71c1c, white),
-  ('coffee', #4CAF50, #CDDC39),
-  ('safari', white, darkslateblue),
-  ('firefox', #1565c0, #ff8f00),
-  ('chrome', #fbc02d, #ef6c00),
-  ('edge', #03a9f4, white),
-  ('android', snow, limegreen),
-  ('apple', #444, white),
-  ('linux', white, #222),
-  ('windows', white, #03a9f4),
-  ('terminal', #222, #fff),
-  ('html5', white, #e65100),
-  ('css3', white, #2196f3),
-  ('git', #222, white),
-  ('free-code-camp', green, white),
-  ('meetup', red, white),
-  ('podcast', red, white),
-  ('codepen', #333, white)
+$icons: (
+  ("heart-o", #b71c1c, white),
+  ("coffee", #4caf50, #cddc39),
+  ("safari", white, darkslateblue),
+  ("firefox", #1565c0, #ff8f00),
+  ("chrome", #fbc02d, #ef6c00),
+  ("edge", #03a9f4, white),
+  ("android", snow, limegreen),
+  ("apple", #444, white),
+  ("linux", white, #222),
+  ("windows", white, #03a9f4),
+  ("terminal", #222, #fff),
+  ("html5", white, #e65100),
+  ("css3", white, #2196f3),
+  ("git", #222, white),
+  ("free-code-camp", green, white),
+  ("meetup", red, white),
+  ("podcast", red, white),
+  ("codepen", #333, white)
 );
 
 @each $icon in $icons {
@@ -481,4 +454,161 @@ $icons : (
     background: nth($icon, 2);
     color: nth($icon, 3);
   }
+}
+
+$bg: #333;
+$push-color: #ffa781;
+
+$push-size: 10rem;
+
+[class*="push"] {
+  position: relative;
+  display: inline-block;
+  width: $push-size;
+  height: $push-size;
+  border: 4px solid #691034;
+  margin: 1em;
+  outline: none;
+  background-color: $push-color;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: box-shadow 200ms;
+}
+.push--flat {
+  box-shadow: inset 0 $push-size/32 0 lighten($push-color, 5%), inset 0 (-$push-size/32) 0 darken($push-color, 5%),
+    inset 0 0 0 $push-size/32 darken($push-color, 3%), inset 0 0 0 $push-size/12 $push-color,
+    inset 0 0 0 $push-size/10 darken($push-color, 20%), inset 0 0 0 $push-size/9.2 darken($push-color, 50%),
+    inset 0 0 0 $push-size/7.5 transparentize(lighten($push-color, 30%), 0.3), inset 0 0 0 $push-size/5.5 $push-color,
+    inset 0 $push-size/2.5 $push-size/7.5 darken($push-color, 5%),
+    inset 0 0 $push-size/10 $push-size/6 darken($push-color, 10%), 0 $push-size/20 0 rgba(0, 0, 0, 0.3);
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: $push-size/20;
+    left: $push-size/10;
+    display: block;
+    width: $push-size/1.25;
+    height: $push-size/1.25;
+    border: $push-size/15 solid rgba(0, 0, 0, 0.3);
+    border-width: 0 0 $push-size/15;
+    border-radius: 50%;
+    transition-duration: 200ms;
+  }
+
+  &:active,
+  // &:hover,
+  &.is-pushed {
+    box-shadow: inset 0 $push-size/32 0 lighten($push-color, 5%), inset 0 (-$push-size/32) 0 darken($push-color, 5%),
+      inset 0 0 0 $push-size/32 darken($push-color, 3%), inset 0 0 0 $push-size/12 $push-color,
+      inset 0 0 0 $push-size/10 darken($push-color, 20%), inset 0 0 0 $push-size/8.5 darken($push-color, 40%),
+      inset 0 0 0 $push-size/7.5 transparentize(lighten($push-color, 30%), 0.8),
+      inset 0 0 0 $push-size/5.5 darken($push-color, 3%), inset 0 $push-size/2.5 $push-size/7.5 darken($push-color, 8%),
+      inset 0 0 $push-size/10 $push-size/6 darken($push-color, 15%), 0 $push-size/20 0 rgba(0, 0, 0, 0.3);
+    background-color: darken($push-color, 2%);
+
+    &:after {
+      bottom: $push-size/20 + $push-size/15;
+      border-width: 0;
+    }
+  }
+}
+
+.push--skeuo {
+  box-shadow: inset 0 $push-size/24 0 lighten($push-color, 5%),
+    inset 0 (-$push-size/24) $push-size/60 darken($push-color, 5%), 0 0 $push-size/60 $push-color,
+    inset 0 0 $push-size/30 darken($push-color, 15%), inset 0 0 $push-size/30 transparentize($bg, 0.5),
+    inset 0 0 $push-size/60 $push-size/12 $push-color,
+    inset 0 (-$push-size/30) $push-size/40 $push-size/10 transparentize($bg, 0.3),
+    inset 0 0 $push-size/60 $push-size/10 darken($push-color, 20%),
+    inset 0 0 $push-size/60 $push-size/10 transparentize($bg, 0.3),
+    inset 0 0 $push-size/120 $push-size/9.2 darken($push-color, 50%),
+    inset 0 0 $push-size/120 $push-size/8 transparentize(lighten($push-color, 30%), 0.3),
+    inset 0 $push-size/20 0 $push-size/8.5 transparentize(lighten($push-color, 15%), 0.3),
+    inset 0 (-$push-size/20) $push-size/60 $push-size/8.5 transparentize(darken($push-color, 10%), 0.8),
+    inset 0 0 0 $push-size/5.5 $push-color, inset 0 $push-size/2.5 $push-size/7.5 darken($push-color, 5%),
+    inset 0 0 $push-size/10 $push-size/6 darken($push-color, 10%), 0 $push-size/40 $push-size/20 rgba(0, 0, 0, 0.5);
+
+  &:active,
+  // &:hover,
+  &.is-pushed {
+    box-shadow: inset 0 $push-size/24 0 lighten($push-color, 5%),
+      inset 0 (-$push-size/24) $push-size/60 darken($push-color, 5%), 0 0 $push-size/60 $push-color,
+      inset 0 0 $push-size/30 darken($push-color, 15%), inset 0 0 $push-size/30 transparentize($bg, 0.5),
+      inset 0 0 $push-size/60 $push-size/12 $push-color,
+      inset 0 (-$push-size/30) $push-size/40 $push-size/10 transparentize($bg, 0.3),
+      inset 0 0 $push-size/60 $push-size/10 darken($push-color, 20%),
+      inset 0 0 $push-size/60 $push-size/10 transparentize($bg, 0.3),
+      inset 0 0 $push-size/40 $push-size/8.5 darken($push-color, 40%),
+      inset 0 0 $push-size/120 $push-size/7.5 transparentize(lighten($push-color, 30%), 0.8),
+      inset 0 $push-size/20 0 28px transparentize(lighten($push-color, 15%), 0.5),
+      inset 0 (-$push-size/20) $push-size/60 28px transparentize(darken($push-color, 20%), 0.8),
+      inset 0 0 0 $push-size/5.5 darken($push-color, 3%), inset 0 $push-size/2.5 $push-size/7.5 darken($push-color, 8%),
+      inset 0 0 $push-size/10 $push-size/6 darken($push-color, 15%), 0 $push-size/40 $push-size/20 rgba(0, 0, 0, 0.5);
+    background-color: darken($push-color, 2%);
+
+    &:before {
+      opacity: 0.5;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: $push-size/4.5;
+    left: $push-size/3.6;
+    display: block;
+    width: $push-size/2.2;
+    height: $push-size/3.3;
+    background: transparentize(lighten($push-color, 30%), 0.8);
+    background: linear-gradient(
+      to top,
+      transparentize(lighten($push-color, 40%), 0.7) 0%,
+      transparentize($push-color, 0.9) 100%
+    );
+    border-radius: 40% 40% 60% 60%;
+    transition: opacity 200ms;
+  }
+}
+.screen {
+  background-color: #030e4f;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  content: " ";
+  overflow: hidden;
+}
+
+.arcade-machine__screen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  pointer-events: none;
+  z-index: 12;
+}
+
+.power::before {
+  background-image: url("../public/images/power.svg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 35%;
+  left: 27.5%;
+}
+.next::before {
+  background-image: url("../public/images/arrow.svg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 35%;
+  left: 27.5%;
 }

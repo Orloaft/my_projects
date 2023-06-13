@@ -9,6 +9,7 @@ import { Footer } from "../component/Footer";
 import { HeroView } from "../component/Hero";
 import { Orbit } from "../component/Orbit/OrbitingView";
 import ArcadeMachine from "../component/ArcadeMachine";
+import SwitcherTV from "../component/TvSwitcher";
 const MainContainer = styled.div`
   background: transparent;
   color: white;
@@ -77,6 +78,16 @@ const Home: NextPage = () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <ArcadeMachine>
+      {[...Array(50)].map((_, i) => (
+        <div
+          key={i}
+          className="star"
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+          }}
+        />
+      ))}
       <Orbit showModal={showModal} setShowModal={setShowModal} />
       {showModal && <EmailForm showModal={setShowModal} />}
     </ArcadeMachine>
