@@ -165,20 +165,19 @@ ul[class^="ring"] {
 }
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 .giant-text {
-  height: 100%;
-  width: 100%;
   pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 8;
-  position: absolute;
   opacity: 0.9;
   font-family: "TiltPrism", sans-serif;
   font-size: 5rem;
   color: #f49f1c;
   text-transform: uppercase;
-
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
   & span {
     transform: skew(-20deg);
   }
@@ -193,6 +192,11 @@ ul[class^="ring"] {
   align-items: center;
   width: 100vw;
   height: 100vh;
+  @media (max-width: 767px) {
+    padding: 1%;
+    flex-direction: column;
+    gap: 0;
+  }
   &__screen {
     display: flex;
     justify-content: center;
@@ -205,6 +209,11 @@ ul[class^="ring"] {
     border: 10px solid #515151;
     background-color: #000000;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    @media (max-width: 767px) {
+      border: 4px solid #515151;
+      width: 100%;
+      height: 80%;
+    }
   }
 
   &__controls {
@@ -212,6 +221,10 @@ ul[class^="ring"] {
     justify-content: space-around;
     height: 100%;
     flex-direction: column;
+    @media (max-width: 767px) {
+      flex-direction: row;
+      height: 20%;
+    }
   }
 }
 
@@ -595,6 +608,7 @@ $push-size: 10rem;
 }
 
 .power::before {
+  transition: all 0.6 ease-in-out;
   background-image: url("../public/images/power.svg");
   background-size: 60%;
   background-repeat: no-repeat;
@@ -604,6 +618,7 @@ $push-size: 10rem;
   left: 27.5%;
 }
 .next::before {
+  transition: all 0.6 ease-in-out;
   background-image: url("../public/images/arrow.svg");
   background-size: 60%;
   background-repeat: no-repeat;

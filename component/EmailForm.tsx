@@ -2,9 +2,8 @@ import styled from "styled-components";
 import axios from "axios";
 import { useState } from "react";
 const Form = styled.form`
-  background-color: #393e41;
+  background-image: url("/images/Hexagon.svg");
   display: flex;
-  border: 2px solid #58355e;
   padding: 0.5rem;
   font-size: 1rem;
   flex-direction: column;
