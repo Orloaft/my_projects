@@ -40,43 +40,54 @@ export const Orbit = (props: any) => {
           <li>
             <ul className="ring-0">
               <li>
-                <div
-                  style={{ boxShadow: " 0 0 10px blue" }}
-                  className="project-icon"
+                <a
+                  href="https://orloaft.itch.io/jambo"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  Jambo
-                </div>
+                  <div
+                    style={{ boxShadow: " 0 0 10px blue" }}
+                    className="project-icon"
+                  >
+                    Jambo
+                  </div>
+                </a>
               </li>
               <li></li>
               <li>
-                {" "}
-                <div
-                  style={{ boxShadow: " 0 0 10px green" }}
-                  className="project-icon"
+                <a
+                  href="https://quanderdome.herokuapp.com"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  Quander Dome
-                </div>
+                  {" "}
+                  <div
+                    style={{ boxShadow: " 0 0 10px green" }}
+                    className="project-icon"
+                  >
+                    Quander Dome
+                  </div>
+                </a>
               </li>
-              <li>
-                <div
-                  style={{ boxShadow: " 0 0 10px purple" }}
-                  className="project-icon"
-                >
-                  Web Eyes
-                </div>
-              </li>
+              <li></li>
             </ul>
           </li>
 
           <li>
             <ul className="ring-1">
               <li>
-                <div
-                  style={{ boxShadow: " 0 0 10px red" }}
-                  className="project-icon"
+                <a
+                  href="https://mnemora.herokuapp.com"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  Mnemo
-                </div>
+                  <div
+                    style={{ boxShadow: " 0 0 10px red" }}
+                    className="project-icon"
+                  >
+                    Mnemo
+                  </div>
+                </a>
               </li>
               <li></li>
               <li></li>
@@ -85,23 +96,37 @@ export const Orbit = (props: any) => {
           <li>
             <ul className="ring-2">
               <li>
-                <div
-                  style={{ boxShadow: " 0 0 10px white" }}
-                  className="project-icon"
+                <a
+                  href="https://github.com/Orloaft/gpt-autodocs"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  GPT-Autodoc
-                </div>
+                  {" "}
+                  <div
+                    style={{ boxShadow: " 0 0 10px white" }}
+                    className="project-icon"
+                  >
+                    GPT-Autodoc
+                  </div>
+                </a>
               </li>
               <li></li>
               <li></li>
               <li></li>
               <li>
-                <div
-                  style={{ boxShadow: " 0 0 10px yellow" }}
-                  className="project-icon"
+                <a
+                  href="https://spacedice.herokuapp.com"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  Space Dice
-                </div>
+                  {" "}
+                  <div
+                    style={{ boxShadow: " 0 0 10px yellow" }}
+                    className="project-icon"
+                  >
+                    Space Dice
+                  </div>
+                </a>
               </li>
               <li></li>
               <li></li>
