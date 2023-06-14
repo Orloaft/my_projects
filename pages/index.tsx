@@ -11,7 +11,7 @@ const Projects: NextPage = () => {
         <title>Alex Orlow - Web Developer</title>
         <meta
           name="description"
-          content="Highly motivated and skilled Web Developer with a passion for creating innovative solutions. Skilled in front-end and back-end development using JavaScript, React, Node.js, and more."
+          content="Highly motivated and skilled Web Developer with a passion for creating innovative solutions."
         />
         <link rel="canonical" href="https://alexorlow.xyz" />
       </Head>

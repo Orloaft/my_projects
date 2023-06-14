@@ -20,7 +20,11 @@ export const Footer = ({
       >
         <Link href="https://www.linkedin.com/in/alex-orlow/">
           <a target="_blank">
-            <Image src="/images/linkedin.png" alt="" layout="fill" />
+            <Image
+              src="/images/linkedin.png"
+              alt="linkedin logo"
+              layout="fill"
+            />
           </a>
         </Link>{" "}
       </div>
@@ -33,7 +37,7 @@ export const Footer = ({
       >
         <Link href="https://github.com/Orloaft">
           <a target="_blank">
-            <Image src="/images/github.png" alt="" layout="fill" />
+            <Image src="/images/github.png" alt="github logo" layout="fill" />
           </a>
         </Link>
       </div>
@@ -48,7 +52,7 @@ export const Footer = ({
         <Image
           onClick={() => setShowModal(!showModal)}
           src="/images/mail.png"
-          alt=""
+          alt="mail icon"
           layout="fill"
         />{" "}
       </div>
