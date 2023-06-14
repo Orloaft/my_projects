@@ -2,7 +2,6 @@ import { NextPage } from "next";
 import styles from "../styles/Projects.module.scss";
 import Image from "next/image";
 import Head from "next/head";
-import BasicTabs from "../component/BasicTabs";
 import Link from "next/link";
 
 const Projects: NextPage = () => {
@@ -30,63 +29,175 @@ const Projects: NextPage = () => {
 
         <h2>Web Developer</h2>
       </header>
-      <section>
-        <h3>About Me</h3>
-        <p className={styles.about}>
-          Highly motivated and skilled Web Developer with a passion for creating
-          innovative solutions. Coming from a background in security and waste
-          management, I bring a unique blend of technical expertise and
-          leadership capabilities to the tech industry. With a focus on
-          continuous learning and a drive to enhance user experiences, I am
-          dedicated to pushing the boundaries of web development.
-        </p>
-      </section>
-      <section>
-        <h3>Skills</h3>
-        <ul>
-          <li>Front-End Development: JavaScript, React, HTML/CSS</li>
-          <li>Back-End Development: Node.js, Express, SQL</li>
-          <li>Frameworks and Libraries: Next.js, Web APIs, DOM API</li>
-          <li>Agile Development Methodologies</li>
-          <li>TypeScript</li>
-          <li>Version Control: Git, GitHub</li>
-          <li>Testing: Jest</li>
-          <li>Tools: Heroku</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Projects</h3>
-        <ul>
-          <li>
-            <Link href="/projects">Interactive Portfolio</Link>
-          </li>
-          <li>QuanderDome</li>
-          <li>SpaceDice</li>
-          <li>Jambo</li>
-          <li>GPT-Autodoc</li>
-          <li>Mnemo</li>
-          <li>Land Locked</li>
-          <li>Web eyes</li>
-          <li>Weather Butler</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Contact Information</h3>
-        <p>Email: alexorlow17@gmail.com</p>
-        <p>Phone: 647-772-4538</p>
-        <p>
-          Website: <a href="https://alexorlow.xyz">alexorlow.xyz</a>
-        </p>
-        <p>
-          LinkedIn:{" "}
-          <a href="https://linkedin.com/in/alex-orlow">
-            linkedin.com/in/alex-orlow
-          </a>{" "}
-        </p>{" "}
-        <p>
-          GitHub: <a href="https://github.com/orloaft">github.com/orloaft</a>
-        </p>
-      </section>
+      <main className={styles.main}>
+        <section className={styles.fullWidth}>
+          <h3>About Me</h3>
+          <p className={styles.about}>
+            Highly motivated and skilled Web Developer with a passion for
+            creating innovative solutions. Coming from a background in security
+            and waste management, I bring a unique blend of technical expertise
+            and leadership capabilities to the tech industry. With a focus on
+            continuous learning and a drive to enhance user experiences, I am
+            dedicated to pushing the boundaries of web development.
+          </p>
+        </section>
+        <section className={styles.halfWidth}>
+          <h3>Skills</h3>
+          <ul>
+            <li>Programming Languages: TypeScript, python , C#</li>
+            <li>
+              Back-End Development: Node.js, Express.js, REST API, Linux,
+              Bash/Zsh
+            </li>
+            <li>
+              Front-End Development: Sass,React, Vue, Webpack, Next.js, Nuxt.js{" "}
+            </li>
+            <li>Game Development: Unity , Godot</li>
+            <li>Agile Methodologies: Scrum, Kanban</li>
+            <li>Version Control: Git, GitHub</li>
+            <li>Testing: Jest, React Testing Library</li>
+            <li>Tools: Heroku, Docker, DigitalOcean</li>
+          </ul>
+        </section>
+        <section className={styles.halfWidth}>
+          <h3>Projects</h3>
+          <ul>
+            <li>
+              <Link href="/projects">
+                <a
+                  id="style-2"
+                  data-replace="Interactive Portfolio"
+                  className={styles.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>Interactive Portfolio</span>
+                </a>
+              </Link>
+            </li>
+            <li>
+              {" "}
+              <a
+                className={styles.link}
+                href="https://quanderdome.herokuapp.com"
+                id="style-2"
+                data-replace="QuanderDome"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>QuanderDome</span>
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a
+                className={styles.link}
+                href="https://spacedice.herokuapp.com"
+                id="style-2"
+                data-replace="Space Dice"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Space Dice</span>
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a
+                className={styles.link}
+                href="https://orloaft.itch.io/jambo"
+                id="style-2"
+                data-replace="Jambo"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Jambo</span>
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a
+                className={styles.link}
+                href="https://github.com/Orloaft/gpt-autodocs"
+                id="style-2"
+                data-replace="GPT-Autodoc"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>GPT-Autodoc</span>
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a
+                className={styles.link}
+                href="https://mnemora.herokuapp.com"
+                id="style-2"
+                data-replace="Mnemo"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Mnemo</span>
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a
+                className={styles.link}
+                href="https://github.com/ludamad/card-game"
+                id="style-2"
+                data-replace="Land Locked"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Land Locked</span>
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a
+                className={styles.link}
+                href="https://github.com/Orloaft/week8-hackathon"
+                id="style-2"
+                data-replace="Web Eyes"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Web Eyes</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section className={styles.fullWidth}>
+          <h3>Contact Information</h3>
+          <p>alexorlow17@gmail.com</p>
+
+          <p>
+            <a
+              className={styles.link}
+              href="https://linkedin.com/in/alex-orlow"
+              id="style-2"
+              data-replace="LinkedIn"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>LinkedIn</span>
+            </a>
+          </p>
+          <p>
+            <a
+              className={styles.link}
+              href="https://github.com/orloaft"
+              id="style-2"
+              data-replace="GitHub"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>GitHub</span>
+            </a>
+          </p>
+        </section>
+      </main>
 
       <div className={`${styles.bubble} ${styles["bubble--1"]}`}></div>
       <div className={`${styles.bubble} ${styles["bubble--2"]}`}></div>
