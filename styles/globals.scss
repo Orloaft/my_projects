@@ -174,12 +174,11 @@ ul[class^="ring"] {
   pointer-events: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   z-index: 8;
-  opacity: 0.9;
   font-family: "TiltPrism", sans-serif;
   font-size: 5rem;
-  color: #f49f1c;
+  color: #a7a7a7;
   text-transform: uppercase;
   @media (max-width: 767px) {
     flex-direction: column;
@@ -443,7 +442,7 @@ footer div:hover {
 a {
   font-size: 1rem;
   border-radius: 0.5rem;
-  background-color: black;
+  // background-color: black;
   max-width: 40%;
 }
 @media (min-width: 48rem) {

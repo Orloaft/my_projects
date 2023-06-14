@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FlipCardProvider } from "./FlipCard";
 import styled from "styled-components";
-import { Column } from "../pages";
+import { Column } from "../pages/projects";
 
 interface ProjectCardProps {
   backText: string;
