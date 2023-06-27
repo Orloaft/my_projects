@@ -4,14 +4,14 @@ import { BackGround } from "./BackGround";
 
 export const ScreenView = ({
   children,
-  screenOn,
+  selectedProject,
 }: {
   children: ReactNode;
-  screenOn: boolean;
+  selectedProject: any;
 }) => {
   return (
     <>
-      {(screenOn && <>{children}</>) || (
+      {(selectedProject !== null && <>{children}</>) || (
         <BackGround>
           {" "}
           <StartScreen />

@@ -5,10 +5,17 @@ import SwitcherTV from "./TvSwitcher";
 
 interface ArcadeMachineProps {
   children: ReactNode;
+  setSelectedProject: any;
+  selectedProject: any;
 }
 
-function ArcadeMachine({ children }: ArcadeMachineProps) {
+function ArcadeMachine({
+  children,
+  setSelectedProject,
+  selectedProject,
+}: ArcadeMachineProps) {
   const [screenOn, setScreenOn] = useState(false);
+  const [projectIndex, setProjectIndex] = useState<number | null>(null);
   const screenRef = useRef<HTMLDivElement | null>(null);
   const timelineRef = useRef<any | null>(null);
   let isTurnedOn = false;
@@ -52,7 +59,9 @@ function ArcadeMachine({ children }: ArcadeMachineProps) {
       <div className="arcade-machine__screen">
         <SwitcherTV screenRef={screenRef}>
           {" "}
-          <ScreenView screenOn={screenOn}>{children}</ScreenView>{" "}
+          <ScreenView selectedProject={selectedProject}>
+            {children}
+          </ScreenView>{" "}
         </SwitcherTV>
       </div>
       <div className="arcade-machine__controls">
@@ -61,11 +70,18 @@ function ArcadeMachine({ children }: ArcadeMachineProps) {
           className="push--skeuo power "
         ></button>{" "}
         <button
-          onClick={() => {
+          onClick={async () => {
             if (!isTurnedOn) {
+              console.log(selectedProject);
               toggleSwitcherTV();
               setTimeout(() => {
-                setScreenOn(!screenOn);
+                if (selectedProject === null) {
+                  setSelectedProject(0);
+                } else if (selectedProject < 5) {
+                  setSelectedProject(selectedProject + 1);
+                } else {
+                  setSelectedProject(0);
+                }
                 toggleSwitcherTV();
               }, 500);
             }
