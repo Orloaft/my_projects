@@ -14,6 +14,7 @@ const Projects: NextPage = () => {
           content="Highly motivated and skilled Web Developer with a passion for creating innovative solutions."
         />
         <link rel="canonical" href="https://alexorlow.xyz" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <header>

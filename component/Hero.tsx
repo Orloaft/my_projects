@@ -28,7 +28,7 @@ font-size: 1rem;
 
 }
 `;
-export const HeroView = () => {
+export const HeroView = ({ text }: { text: string }) => {
   return (
     <Hero>
       <div style={{ width: "30%" }}></div>
@@ -46,9 +46,7 @@ export const HeroView = () => {
             color: "white",
           }}
         >
-          My name is Alex. <br></br>I am a lover of games and web technologies.
-          I invite you to browse my existing projects or click on the mail icon
-          to get in touch.
+          {text}
         </Text>
       </Frame>
     </Hero>

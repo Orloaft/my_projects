@@ -57,7 +57,7 @@ function ArcadeMachine({
   return (
     <div className="arcade-machine">
       <div className="arcade-machine__screen">
-        <SwitcherTV screenRef={screenRef}>
+        <SwitcherTV screenRef={screenRef} selectedProject={selectedProject}>
           {" "}
           <ScreenView selectedProject={selectedProject}>
             {children}

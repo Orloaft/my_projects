@@ -34,7 +34,11 @@ export const Orbit = (props: any) => {
           <span>Alex</span> <span>Orlow</span>
         </div> */}
           <div className="hero-text">
-            <HeroView />
+            <HeroView
+              text={`My name is Alex. \nI am a lover of games and web technologies.
+          I invite you to browse my existing projects or click on the mail icon
+          to get in touch.`}
+            />
           </div>
 
           <li>
