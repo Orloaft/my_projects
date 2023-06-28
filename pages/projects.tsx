@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { BackGround } from "../component/BackGround";
 import { useState } from "react";
 import { EmailForm } from "../component/EmailForm";
-import ProjectList from "../component/ProjectList";
+
 import { Footer } from "../component/Footer";
 import { HeroView } from "../component/Hero";
 import { Orbit } from "../component/Orbit/OrbitingView";
