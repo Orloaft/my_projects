@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Orbit } from "../component/Orbit/OrbitingView";
 import ArcadeMachine from "../component/ArcadeMachine";
 import { HeroView } from "../component/Hero";
+import { EmailForm } from "../component/EmailForm";
 interface Project {
   title: string;
   description: string;
@@ -67,6 +68,7 @@ const Home: NextPage = () => {
             })}
           </>
           <Orbit showModal={showModal} setShowModal={setShowModal} />
+          {showModal && <EmailForm showModal={setShowModal} />}
         </div>
       )) ||
         (selectedProject && (

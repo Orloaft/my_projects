@@ -20,6 +20,17 @@ html {
   background-size: cover;
   font-size: 100%;
 }
+.disclaimer {
+  opacity: 0.8;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 25%;
+  & b {
+    font-size: 2rem;
+  }
+}
 .hero-text {
   position: absolute;
   top: 100%;
