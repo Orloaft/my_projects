@@ -45,7 +45,7 @@ const Projects: NextPage = () => {
         <section className={styles.halfWidth}>
           <h3>Skills</h3>
           <ul>
-            <li>Programming Languages: TypeScript, python , C#</li>
+            <li>Programming Languages: TypeScript, Python , C#</li>
             <li>
               Back-End Development: Node.js, Express.js, REST API, Linux,
               Bash/Zsh
