@@ -2,6 +2,7 @@ import styled from "styled-components";
 import axios from "axios";
 import { useState } from "react";
 const Form = styled.form`
+  color: white;
   background-image: url("/images/Hexagon.svg");
   display: flex;
   padding: 0.5rem;
@@ -9,6 +10,7 @@ const Form = styled.form`
   flex-direction: column;
   align-items: center;
   position: absolute;
+  border-radius: 1.25rem;
   gap: 1rem;
   top: 10%;
   left: 5%;
