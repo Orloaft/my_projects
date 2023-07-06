@@ -73,7 +73,21 @@ export const Orbit = (props: any) => {
                   </div>
                 </a>
               </li>
-              <li></li>
+              <li>
+                {" "}
+                <a
+                  href="https://quanderdome2-c52c7ed485c6.herokuapp.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div
+                    style={{ boxShadow: " 0 0 10px blue" }}
+                    className="project-icon"
+                  >
+                    Quander Dome II
+                  </div>
+                </a>
+              </li>
             </ul>
           </li>
 

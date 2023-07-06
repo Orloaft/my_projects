@@ -93,6 +93,19 @@ const Projects: NextPage = () => {
               {" "}
               <a
                 className={styles.link}
+                href="https://quanderdome2-c52c7ed485c6.herokuapp.com/"
+                id="style-2"
+                data-replace="QuanderDome II"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>QuanderDome II</span>
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a
+                className={styles.link}
                 href="https://spacedice.herokuapp.com"
                 id="style-2"
                 data-replace="Space Dice"
