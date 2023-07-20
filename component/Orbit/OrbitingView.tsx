@@ -129,7 +129,21 @@ export const Orbit = (props: any) => {
                 </a>
               </li>
               <li></li>
-              <li></li>
+              <li>
+                {" "}
+                <a
+                  href="https://byte-stream-58b30c4b6d4a.herokuapp.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div
+                    style={{ boxShadow: " 0 0 10px blue" }}
+                    className="project-icon"
+                  >
+                    ByteStream
+                  </div>
+                </a>
+              </li>
               <li></li>
               <li>
                 <a

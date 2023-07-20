@@ -106,6 +106,19 @@ const Projects: NextPage = () => {
               {" "}
               <a
                 className={styles.link}
+                href="https://byte-stream-58b30c4b6d4a.herokuapp.com"
+                id="style-2"
+                data-replace="ByteStream"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>ByteStream</span>
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a
+                className={styles.link}
                 href="https://spacedice.herokuapp.com"
                 id="style-2"
                 data-replace="Space Dice"
